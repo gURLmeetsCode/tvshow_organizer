@@ -6,34 +6,36 @@ const {
   GraphQLList,
   GraphQLNonNull
 } = require('graphql')
+const axios = require('axios')
 
 const ShowType = new GraphQLObjectType({
   name: "Show",
   fields:() => ({
-    id: { type: GraphQLString},
     name: { type: GraphQLString},
-    summary: { type: GraphQLString}
+    premiered: {type: GraphQLString},
+    summary: {type: GraphQLString},
+    officialSite: {type: GraphQLString},
+    status: {type: GraphQLString},
+    type: {type: GraphQLString}
   })
 })
+
+
+
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
-    show: {
-      type: ShowType,
-      args: {
-        id: {type: GraphQLString}
-      },
-      resolve(parentValue, args){
-        for (let i = 0; i < array.length; i++) {
-          if(array[i].id === args.id){
-            return array[i]
-          }
-        }
+    shows: {
+      type: new GraphQLList(ShowType),
+      resolve(parentVal, args){
+        return axios.get('http://api.tvmaze.com/shows')
+          .then(res => res.data)
       }
     }
   }
 })
+
 
 module.exports = new GraphQLSchema({
   query: RootQuery
