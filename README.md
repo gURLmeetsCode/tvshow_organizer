@@ -2,6 +2,17 @@
 
 One Paragraph of project description goes here
 
+#stuff
+1. Installation instructions
+
+2. Discussion of technologies used
+
+3. A section demonstrating that you met the requirements
+
+4. If there are bonuses, a section demonstrating that you met them
+
+5. For algorithms and data structures, time and space complexity
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.

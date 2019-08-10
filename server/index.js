@@ -1,7 +1,8 @@
 const express = require('express')
 const path = require('path')
 const morgan = require('morgan')
-const cors = require('cors');
+const graphqlHTTP = require('express-graphql');
+const schema = require('./schema.js')
 
 const app = express()
 
@@ -13,17 +14,16 @@ app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
 
 // Static middleware
 app.use(express.static(path.join(__dirname, '..', 'public')))
 
 
-app.use(cors());
+// graphql endpoint
+app.use('/graphql', graphqlHTTP({
+  schema,
+  graphiql: true
+}))
 
 
 app.use('/api', require('./api')); // include our routes!
