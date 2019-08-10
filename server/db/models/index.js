@@ -1,4 +1,5 @@
 const db = require('../_db')
+const Show = require('./Shows')
 
 
 
@@ -7,6 +8,6 @@ const db = require('../_db')
 
 
 module.exports = {
-
+  Show,
   db
 }

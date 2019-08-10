@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const morgan = require('morgan')
 const graphqlHTTP = require('express-graphql');
-const schema = require('./schema.js')
+const schema = require('./schema')
 
 const app = express()
 
