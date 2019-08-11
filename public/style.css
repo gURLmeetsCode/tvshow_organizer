@@ -1,0 +1,15 @@
+.main-logo{
+  width: 300px;
+  margin: auto;
+  display: block;
+}
+
+.main-icon{
+  width: 90px;
+
+}
+
+.main-logo-title{
+  font-family: 'Montserrat', sans-serif;
+  color: #eee;
+}

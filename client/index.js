@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Welcome from './components/Welcome'
+import App from './components/App'
+
 
 
 
 ReactDOM.render(
-  <Welcome />,
-  document.getElementById('root')
+    <App />,
+    document.getElementById('root')
 );

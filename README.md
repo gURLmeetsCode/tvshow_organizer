@@ -1,47 +1,35 @@
-# Project Title
+# Tv Show Organizer
 
-One Paragraph of project description goes here
+Simple application that uses GraphQL with 3rd party API on the backend and React and Apollo on the frontend.
 
-#stuff
-1. Installation instructions
-
-2. Discussion of technologies used
-
-3. A section demonstrating that you met the requirements
-
-4. If there are bonuses, a section demonstrating that you met them
-
-5. For algorithms and data structures, time and space complexity
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Here are the instructions on what software you need install the software and how to install them
 
 ```
-Give examples
+npm install
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+To get a development env running
 
 ```
-Give the example
+npm run start-dev
 ```
 
-And repeat
+* For additional scripts, refer to the package.json.
 
-```
-until finished
-```
 
-End with an example of getting some data out of the system or using it for a little demo
+Check localhost:4000 for running application.
+Check localhost:4000/graphql for running Graphiql IDE.
+
 
 ## Running the tests
 
@@ -55,20 +43,18 @@ Explain what these tests test and why
 Give an example
 ```
 
-### And coding style tests
+## Live Site
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+* [Deployed version]("http://somethinghere.com")
 
 ## Built With
 
 
 
 ## Author
+
+[Natasha Kelly]("github.com/gURLmeetsCode")
+
+
+##Future Goals
+I want to work on extending the project to use a SQL Database instead of an 3rd party API.
